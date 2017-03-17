@@ -20,7 +20,7 @@ $chapter = new Chapter();
 $chapter->setName('First Chapter');
 $chapter->setText('This is the first Chapter, which I have created.');
 $document = new Document();
-$document->setAuthor('Stefan Meng');
+$document->setAuthor('claru');
 $document->setLanguage('english');
 $document->setTitle('Image Pattern matching algorithm');
 $document->setType('Bachelor Thesis');
@@ -29,6 +29,7 @@ $outputConfiguration = new OutputConfiguration();
 $outputConfiguration->setPath('/tmp');
 //
 $strategy = new LatexStrategy();
-$strategy->generateOutput($document, $outputConfiguration);
+$latexFolder =  $strategy->generateOutput($document, $outputConfiguration);
+echo $latexFolder->getPath();
 //
 echo '';

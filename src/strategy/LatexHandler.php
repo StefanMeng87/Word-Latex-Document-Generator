@@ -20,18 +20,30 @@ class LatexStrategy implements IOutputStrategy
 
     private $configuration;
 
+    /**
+     * @param Document $document
+     * @param OutputConfiguration $configuration
+     * @return LatexFolder
+     *
+     */
+
     public function generateOutput(Document $document, OutputConfiguration $configuration)
     {
         $this->document = $document;
         $this->configuration = $configuration;
-        $this->generateRootFolder();
+        $rootFolder = $this->generateRootFolder();
+        return $rootFolder;
     }
 
+    /**
+     * @return LatexFolder
+     */
     private function generateRootFolder(){
         //generate Root Folder
         $rootFolder = new LatexFolder();
         $rootFolder->setPath($this->configuration->getPath());
         //todo Generate the actual output Structure.
+        return $rootFolder;
     }
 
 }

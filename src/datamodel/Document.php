@@ -108,6 +108,4 @@ class Document
         $this->author = $author;
     }
 
-
-
 }
