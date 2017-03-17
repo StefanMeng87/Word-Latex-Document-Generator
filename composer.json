@@ -1,12 +1,11 @@
 {
-  "name": "stefan87/documentGenerator",
+  "name": "claru/documentGenerator",
   "description": "This is a package, which builds Document and Chapter structures.",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "Stefan Meng",
-      "email": "stefan.meng87@gmail.com"
+      "name": "claru"
     }
   ],
   "require": {
