@@ -2,7 +2,7 @@
 
 /**
  * Implements the Strategy to convert a given Document into a Latex Document.
- * User: Stefan
+ * User: Claru
  * Date: 27.12.16
  * Time: 15:39
  */
