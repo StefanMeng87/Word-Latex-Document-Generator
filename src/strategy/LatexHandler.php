@@ -1,7 +1,6 @@
 <?php
 
 namespace documentGenerator;
-
 /**
  * Implements the Strategy to convert a given Document into a Latex Document.
  * User: claru
@@ -34,6 +33,5 @@ class LatexStrategy implements IOutputStrategy
         $rootFolder->setPath($this->configuration->getPath());
         //todo Generate the actual output Structure.
     }
-
 
 }

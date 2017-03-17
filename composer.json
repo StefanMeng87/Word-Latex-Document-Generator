@@ -1,8 +1,8 @@
 {
   "name": "claru/documentGenerator",
   "description": "This is a package, which builds Document and Chapter structures.",
-  "minimum-stability": "stable",
-  "license": "proprietary",
+  "minimum-stability": "dev",
+  "license": "MIT",
   "authors": [
     {
       "name": "claru"
