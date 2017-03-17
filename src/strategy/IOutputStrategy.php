@@ -9,4 +9,6 @@
 interface IOutputStrategy
 {
 
+    public function generateOutput($Document);
+
 }
