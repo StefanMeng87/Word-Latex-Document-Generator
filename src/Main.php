@@ -9,8 +9,11 @@ namespace documentGenerator;
  */
 include('datamodel/Document.php');
 include('datamodel/Chapter.php');
+include ('datamodel/OutputConfiguration.php');
 include('strategy/IOutputStrategy.php');
 include('strategy/LatexHandler.php');
+include ('output/LatexFile.php');
+include ('output/LatexFolder.php');
 
 // Learn all Language related stuff.
 $chapter = new Chapter();
@@ -22,8 +25,10 @@ $document->setLanguage('english');
 $document->setTitle('Image Pattern matching algorithm');
 $document->setType('Bachelor Thesis');
 $document->addChapter($chapter);
+$outputConfiguration = new OutputConfiguration();
+$outputConfiguration->setPath('/tmp');
 //
 $strategy = new LatexStrategy();
-$strategy->generateOutput($document);
+$strategy->generateOutput($document, $outputConfiguration);
 //
 echo '';

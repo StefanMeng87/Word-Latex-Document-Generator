@@ -11,10 +11,29 @@ namespace documentGenerator;
 
 class LatexStrategy implements IOutputStrategy
 {
+    /**
+     * @var Document
+     */
+    private $document;
+    /**
+     * @var OutputConfiguration
+     */
 
-    public function generateOutput(Document $document)
+    private $configuration;
+
+    public function generateOutput(Document $document, OutputConfiguration $configuration)
     {
-        // TODO: Implement generateOutput() method.
-        echo $document->getTitle();
+        $this->document = $document;
+        $this->configuration = $configuration;
+        $this->generateRootFolder();
     }
+
+    private function generateRootFolder(){
+        //generate Root Folder
+        $rootFolder = new LatexFolder();
+        $rootFolder->setPath($this->configuration->getPath());
+        //todo Generate the actual output Structure.
+    }
+
+
 }

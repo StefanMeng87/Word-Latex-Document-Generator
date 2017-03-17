@@ -14,7 +14,6 @@ class Chapter
     private $name;
     private $text;
 
-
     /**
      * @return mixed
      */

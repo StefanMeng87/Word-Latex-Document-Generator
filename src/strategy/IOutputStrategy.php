@@ -10,6 +10,6 @@ namespace documentGenerator;
 interface IOutputStrategy
 {
 
-    public function generateOutput(Document $document);
+    public function generateOutput(Document $document, OutputConfiguration $configuration);
 
 }
