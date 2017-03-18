@@ -23,6 +23,7 @@ $document = new Document();
 $document->setAuthor('claru');
 $document->setLanguage('english');
 $document->setTitle('Image Pattern matching algorithm');
+$document->setShortName('Image Pattern');
 $document->setType('Bachelor Thesis');
 $document->addChapter($chapter);
 $outputConfiguration = new OutputConfiguration();
@@ -30,6 +31,6 @@ $outputConfiguration->setPath('/tmp');
 //
 $strategy = new LatexStrategy();
 $latexFolder =  $strategy->generateOutput($document, $outputConfiguration);
-echo $latexFolder->getPath();
+echo $latexFolder->getName();
 //
 echo '';

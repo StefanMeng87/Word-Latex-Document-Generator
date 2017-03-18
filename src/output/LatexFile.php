@@ -11,6 +11,41 @@ namespace documentGenerator;
 
 class LatexFile
 {
+    private $header;
+    private $text;
+
+    /**
+     * @return mixed
+     */
+    public function getHeader()
+    {
+        return $this->header;
+    }
+
+    /**
+     * @param mixed $header
+     */
+    public function setHeader($header)
+    {
+        $this->header = $header;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * @param mixed $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+    }
+
 
 
 }

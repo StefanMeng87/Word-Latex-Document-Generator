@@ -17,12 +17,16 @@ class Document
     private $title;
     private $language;
     private $author;
+    private $shortName;
 
     function addChapter($chapter)
     {
         array_push($this->chapters, $chapter);
     }
 
+    /**
+     * @return array
+     */
     function getAllChapters()
     {
         return $this->chapters;
@@ -107,5 +111,23 @@ class Document
     {
         $this->author = $author;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getShortName()
+    {
+        return $this->shortName;
+    }
+
+    /**
+     * @param mixed $shortName
+     */
+    public function setShortName($shortName)
+    {
+        $this->shortName = $shortName;
+    }
+
+
 
 }

@@ -1,6 +1,8 @@
 <?php
 
 namespace documentGenerator;
+use phpDocumentor\Reflection\Types\Null_;
+
 /**
  * Implements the Strategy to convert a given Document into a Latex Document.
  * User: claru
@@ -17,7 +19,6 @@ class LatexStrategy implements IOutputStrategy
     /**
      * @var OutputConfiguration
      */
-
     private $configuration;
 
     /**
@@ -40,9 +41,17 @@ class LatexStrategy implements IOutputStrategy
      */
     private function generateRootFolder(){
         //generate Root Folder
+        if ($this->document == Null or $this->configuration == NULL){
+            return Null;
+        }
         $rootFolder = new LatexFolder();
+        $rootFolder->setName($this->document->getShortName().'_Assignment');
         $rootFolder->setPath($this->configuration->getPath());
-        //todo Generate the actual output Structure.
+        $chapters = $this->document->getAllChapters();
+        foreach ($chapters as $chapter) {
+            $latexFile = new LatexFile();
+            //todo Generate the Latex File Structure.
+        }
         return $rootFolder;
     }
 
