@@ -31,6 +31,5 @@ $outputConfiguration->setPath('/tmp');
 //
 $strategy = new LatexStrategy();
 $latexFolder =  $strategy->generateOutput($document, $outputConfiguration);
-echo $latexFolder->getName();
 //
 echo '';
