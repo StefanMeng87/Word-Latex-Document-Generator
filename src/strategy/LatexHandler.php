@@ -10,7 +10,7 @@ use phpDocumentor\Reflection\Types\Null_;
  * Time: 15:39
  */
 
-class LatexStrategy implements IOutputStrategy
+class LatexHandler implements OutputStrategyInterface
 {
     /**
      * @var Document
@@ -48,9 +48,13 @@ class LatexStrategy implements IOutputStrategy
         $rootFolder->setName($this->document->getShortName().'_Assignment');
         $rootFolder->setPath($this->configuration->getPath());
         $chapters = $this->document->getAllChapters();
+        // create Latex Files.
         foreach ($chapters as $chapter) {
             $latexFile = new LatexFile();
-            //todo Generate the Latex File Structure.
+            /* @var $chapter Chapter */
+            $latexFile->setHeader($chapter->getName());
+            $latexFile->setText($chapter->getText());
+
         }
         return $rootFolder;
     }

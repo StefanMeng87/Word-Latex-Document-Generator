@@ -29,7 +29,8 @@ $document->addChapter($chapter);
 $outputConfiguration = new OutputConfiguration();
 $outputConfiguration->setPath('/tmp');
 //
-$strategy = new LatexStrategy();
+$strategy = new LatexHandler();
 $latexFolder =  $strategy->generateOutput($document, $outputConfiguration);
+$latexFolder->getFiles();
 //
 echo '';

@@ -7,7 +7,7 @@ namespace documentGenerator;
  * Date: 27.12.16
  * Time: 15:13
  */
-interface IOutputStrategy
+interface OutputStrategyInterface
 {
 
     public function generateOutput(Document $document, OutputConfiguration $configuration);

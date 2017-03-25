@@ -41,7 +41,7 @@ class Document
     }
 
     /**
-     * @param array $chapters
+     * @param array
      */
     public function setChapters(array $chapters)
     {
